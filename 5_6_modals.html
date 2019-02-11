@@ -9,6 +9,21 @@
     crossorigin="anonymous">
 
   <title>Bootstrap Sandbox</title>
+  <style>
+    .modal-dialog {
+      max-width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      
+    }
+
+    .modal-content {
+      height: auto;
+      min-height: 100%;
+      border-radius: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -88,22 +103,27 @@
     <!--#################START HERE#####################-->
 
     <!-- MODAL TRIGGER -->
-    <button>Launch Modal</button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Launch Modal</button>
 
     <!-- MODAL -->
-    <div>
-      <div>
-        <div>
-          <div>
-            <h5>Modal Title</h5>
-            <button>&times;</button>
+    <div class="modal" id="myModal" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal Title</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
           </div>
-          <div>
+          <div class="modal-body">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis
-            architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
+            architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias necessitatibus nobis optio est tempora ipsa nostrum illo repellendus consectetur quos, esse fugit laboriosam explicabo cumque. Voluptatibus corporis veniam excepturi harum!
+            Cupiditate sequi dignissimos odio, excepturi dolore rem velit veniam delectus deleniti quo nobis voluptates placeat ut laborum illum sunt perspiciatis facilis modi, dolorem, libero in corporis sed aspernatur! Tempore, dicta?
+            Magnam esse quas repellat rerum possimus ullam molestias omnis adipisci accusantium ipsam saepe, distinctio blanditiis neque similique necessitatibus nulla dolore consequatur quibusdam sit? Voluptates velit autem eveniet, obcaecati sunt voluptatibus!
+            Veniam dicta placeat delectus beatae eaque porro nostrum itaque debitis. Quos quasi distinctio dolor sunt illo harum inventore commodi mollitia assumenda! Maxime expedita dolorum labore et, incidunt ex quo aut!
+            Similique perferendis fugit porro dolore, adipisci odit doloribus quia nulla, explicabo consectetur necessitatibus? Deleniti placeat ab beatae quisquam recusandae incidunt odit dolorum? Suscipit reprehenderit soluta quae, labore dolore ea tenetur.
           </div>
-          <div>
-            <button>Close</button>
+          <div class="modal-footer">
+            <button class="btn btn-secondary mr-auto" data-dismiss="modal">Close</button>
+            <a href="http://127.0.0.1:5500/bootstrap_sandbox/5_6_modals.html" class="btn btn-primary">Save Changes</a>
           </div>
         </div>
       </div>
@@ -113,7 +133,36 @@
     <br>
 
     <!-- LOGIN MODAL TRIGGER -->
+    <!-- MODAL TRIGGER -->
+    <button class="btn btn-dark" data-toggle="modal" data-target="#loginModal">Launch Modal</button>
 
+    <!-- MODAL -->
+    <div class="modal" id="loginModal" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" type="text" class="form-control" placeholder="Username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" class="form-control" placeholder="Password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary mr-auto" data-dismiss="modal">Close</button>
+            <a href="http://127.0.0.1:5500/bootstrap_sandbox/5_6_modals.html" class="btn btn-primary">Submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- LOGIN MODAL -->
 
